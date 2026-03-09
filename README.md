@@ -74,5 +74,5 @@ http://localhost:3000
 
 ## Author
 
-Marina  
+Maryna Ishchenko  
 Software Developer focused on JavaScript, React, Next.js, and TypeScript.
