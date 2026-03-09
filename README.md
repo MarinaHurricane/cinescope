@@ -43,7 +43,7 @@ This project helped me practise:
 Clone the repository:
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/REPO_NAME.git
+git clone https://github.com/MarinaHurricane/04-react-query.git
 ```
 
 Navigate to the project folder:
