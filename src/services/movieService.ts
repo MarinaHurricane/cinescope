@@ -18,8 +18,27 @@ export default function fetchMovies(query: string, page: number = 1):Promise<Fet
         Authorization: `Bearer ${myKey}`
       },
       params: {
-        query,
+        query: encodeURIComponent(query),
         page,
       }
-    }).then ((response) => response.data);
+    }) 
+    .then ((response) => response.data);
+}
+
+export function fetchPopularMovies(
+  page: number = 1
+): Promise<FetchMoviesResponse> {
+      const myKey = import.meta.env.VITE_TMDB_TOKEN;
+    const url = 'https://api.themoviedb.org/3/movie/popular';
+  return axios
+    .get<FetchMoviesResponse>(url, {
+        headers: {
+        accept: "application/json",
+        Authorization: `Bearer ${myKey}`
+      },
+      params: {
+        page,
+      },
+    })
+    .then((response) => response.data);
 }
