@@ -60,42 +60,33 @@ function App() {
 
           <SearchBar onSubmit={handleSearch} />
 
-          {/* {isLoading && <Loader />}
-
-          {isError && <ErrorMessage />} */}
-
-     
           <section className="all-movies">
             <h2>All Movies</h2>
-            {isLoading ? <Loader /> : isError ? <ErrorMessage /> :  <MovieGrid
-            movies={movies}
-            onSelect={(movie) => setSelectedMovie(movie)}
-          />}
+            {isLoading ? (
+              <Loader />
+            ) : isError ? (
+              <ErrorMessage />
+            ) : (
+              <MovieGrid
+                movies={movies}
+                onSelect={(movie) => setSelectedMovie(movie)}
+              />
+            )}
           </section>
-         
 
-               {totalPages > 1 && (
+          {totalPages > 1 && (
             <ReactPaginate
               pageCount={totalPages}
               pageRangeDisplayed={5}
               marginPagesDisplayed={1}
               onPageChange={({ selected }) => setPage(selected + 1)}
               forcePage={page - 1}
-              // containerClassName={css.pagination}
-              // activeClassName={css.active}
-              // nextLabel="→"
-              // previousLabel="←"
-
-               containerClassName="flex gap-2 justify-center mt-6"
-  pageClassName="px-3 py-1 bg-gray-700 rounded"
-  pageLinkClassName="px-3 py-1 text-white cursor-pointer"
-  activeClassName="bg-gray-900"
-  previousClassName="px-3 py-1 bg-gray-700 rounded text-white hover:bg-gray-600 transition"
-  nextClassName="px-3 py-1 bg-gray-700 rounded text-white cursor-pointer"
-//   containerClassName="flex gap-2 justify-center mt-6"
-// pageClassName="px-3 py-1 rounded bg-gray-700 hover:bg-gray-600"
-// activeClassName="bg-blue-600"
-// pageLinkClassName="text-white"
+              containerClassName="flex gap-2 justify-center mt-6"
+              pageClassName="px-3 py-1 bg-gray-700 rounded"
+              pageLinkClassName="px-3 py-1 text-white cursor-pointer"
+              activeClassName="bg-gray-900"
+              previousClassName="px-3 py-1 bg-gray-700 rounded text-white hover:bg-gray-600 transition"
+              nextClassName="px-3 py-1 bg-gray-700 rounded text-white cursor-pointer"
             />
           )}
 
