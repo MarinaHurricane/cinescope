@@ -243,8 +243,8 @@ function App() {
           <header>
             <img src="/hero.png" alt="Hero Banner" />
             <h1>
-              Find <span className="text-gradient">Movies</span> You'll Enjoy
-              Without the Hussle
+              Find <span className="text-gradient">Movies</span> and Watch Trailers All
+              in One Place
             </h1>
             <SearchBar onSubmit={handleSearch} />
           </header>

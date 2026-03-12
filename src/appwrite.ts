@@ -64,7 +64,6 @@ export async function getTrendingMovies(): Promise<TrendingMovie[]> {
     });
 
     const rows = result.rows as unknown as TrendingMovie[];
-    console.log(rows);
     return [...rows].sort((a, b) => b.count - a.count);
   } catch (error) {
     console.log(error);
