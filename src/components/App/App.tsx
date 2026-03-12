@@ -97,12 +97,11 @@ function App() {
 
           {trendingMovies.length > 0 && (
             <section className="trending">
-              <h2>Trending Movies</h2>
+              <h2 className="mb-16">Trending Movies</h2>
 
-              <ul>
-                {trendingMovies.map((movie, index) => (
+              <ul className="mb-12">
+                {trendingMovies.map((movie) => (
                   <li key={movie.$id}>
-                    <p>{index + 1}</p>
                     <p>{movie.title}</p>
                     <img src={movie.poster_url} alt={movie.title} />
                   </li>
