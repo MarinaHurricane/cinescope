@@ -86,8 +86,7 @@ function App() {
         <div className="pattern" />
 
         <div className="wrapper">
-          <header>
-            <img src="/hero.png" alt="Hero Banner" />
+          <header className="pt-64 pb-10">
             <h1>
               Find <span className="text-gradient">Movies</span> and Watch
               Trailers All in One Place
@@ -97,7 +96,7 @@ function App() {
 
           {trendingMovies.length > 0 && (
             <section className="trending">
-              <h2 className="mb-16">Trending Movies</h2>
+              <h2 className="mb-16 ml-8">Trending Movies</h2>
 
               <ul className="mb-12">
                 {trendingMovies.map((movie) => (
@@ -111,7 +110,7 @@ function App() {
           )}
 
           <section className="all-movies">
-            <h2>All Movies</h2>
+            <h2 className="ml-8">All Movies</h2>
 
             {isLoading ? (
               <Loader />
