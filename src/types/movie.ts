@@ -8,3 +8,13 @@ export interface Movie {
     vote_average: number;
     original_language: string;
 }
+
+
+export interface TrendingMovie {
+  $id: string;
+  title: string;
+  searchTerm: string;
+  count: number;
+  movie_id: number;
+  poster_url: string;
+}

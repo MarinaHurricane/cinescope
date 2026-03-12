@@ -28,24 +28,26 @@
     text-decoration: underline;
 }
 
-/* .form {
+.form {
     display: flex;
+    width: 100%;
     gap: 8px;
     flex-wrap: nowrap;
-} */
+    justify-content: space-between;
+}
 
 .input {
     padding: 10px 12px;
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    width: 240px;
+    width: 640px;
 }
 
 .button {
-    padding: 10px 20px;
+    padding: 10px 50px;
     font-size: 16px;
-    background-color: #0a66c2;
+    background-color: #AB8BFF;
     color: white;
     border: none;
     border-radius: 4px;

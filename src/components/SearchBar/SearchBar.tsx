@@ -35,12 +35,12 @@ export default function SearchBar( {onSubmit}: SearchBarProps) {
         type="text"
         name="query"
         autoComplete="off"
-        placeholder="Search movies..."
+        placeholder="Search thtough thousands of movies..."
         autoFocus
       />
-      {/* <button className={styles.button} type="submit">
+      <button className={styles.button} type="submit">
         Search
-      </button> */}
+      </button>
     </form>
     </div>
     </div>
