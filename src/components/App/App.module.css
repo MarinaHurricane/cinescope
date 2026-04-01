@@ -1,34 +1,71 @@
 .app {
-    padding: 0 16px;
+  padding: 0 16px;
+}
+
+.header {
+  padding-top: 16rem;
+  padding-bottom: 2.5rem;
+}
+
+.trendingTitle {
+  margin-bottom: 4rem;
+  margin-left: 2rem;
+}
+
+.trendingList {
+  margin-bottom: 3rem;
+}
+
+.allMoviesTitle {
+  margin-left: 2rem;
 }
 
 .pagination {
-    display: flex;
-    justify-content: center;
-    gap: 6px;
-    margin: 16px 0;
-    list-style: none;
-    padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  list-style: none;
+  padding: 0;
 }
 
-.pagination li {
-    width: 40px;
-    height: 40px;
-    border: 1px solid #ccc;
-    cursor: pointer;
-    border-radius: 4px;
+.page {
+  background-color: #374151;
+  border-radius: 4px;
 }
 
-.pagination a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
+.pageLink {
+  display: block;
+  padding: 0.25rem 0.75rem;
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
 }
 
 .active {
-    background-color: #0a66c2;
-    color: white;
-    font-weight: bold;
+  background-color: #111827;
+  color: white;
+  font-weight: bold;
+}
+
+.previous {
+  padding: 0.25rem 0.75rem;
+  background-color: #374151;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.previous:hover {
+  background-color: #4b5563;
+}
+
+.next {
+  padding: 0.25rem 0.75rem;
+  background-color: #374151;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
 }

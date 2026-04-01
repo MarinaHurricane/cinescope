@@ -1,0 +1,22 @@
+.footer {
+  margin-top: 4rem;
+  border-top: 1px solid #1f2937;
+  padding: 1.5rem 0;
+  text-align: center;
+  color: #9ca3af;
+  font-size: 0.875rem;
+}
+
+.subtext {
+  margin-top: 0.25rem;
+}
+
+.link {
+  text-decoration: underline;
+  color: inherit;
+  transition: color 0.2s ease;
+}
+
+.link:hover {
+  color: white;
+}

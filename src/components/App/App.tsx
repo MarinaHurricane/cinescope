@@ -12,6 +12,7 @@ import { useQuery, keepPreviousData } from "@tanstack/react-query";
 import toast from "react-hot-toast";
 import { getTrendingMovies, updateSearchCount } from "../../appwrite";
 import Footer from "../Footer/Footer";
+import styles from "./App.module.css";
 
 function App() {
   const [query, setQuery] = useState("");
@@ -58,10 +59,8 @@ function App() {
     const results = data?.results;
 
     if (!query.trim()) return;
-    // Prevent stale search results from being saved when React Query keeps previous data
     if (isFetching) return;
     if (!results || results.length === 0) return;
-    // Prevent duplicate Appwrite writes caused by React StrictMode double render
     if (lastSavedQueryRef.current === query) return;
 
     updateSearchCount({
@@ -82,11 +81,11 @@ function App() {
   return (
     <>
       <Toaster />
-      <main>
+      <main className={styles.app}>
         <div className="pattern" />
 
         <div className="wrapper">
-          <header className="pt-64 pb-10">
+          <header className={styles.header}>
             <h1>
               Find <span className="text-gradient">Movies</span> and Watch
               Trailers All in One Place
@@ -96,9 +95,9 @@ function App() {
 
           {trendingMovies.length > 0 && (
             <section className="trending">
-              <h2 className="mb-16 ml-8">Trending Movies</h2>
+              <h2 className={styles.trendingTitle}>Trending Movies</h2>
 
-              <ul className="mb-12">
+              <ul className={styles.trendingList}>
                 {trendingMovies.map((movie) => (
                   <li key={movie.$id}>
                     <p>{movie.title}</p>
@@ -110,7 +109,7 @@ function App() {
           )}
 
           <section className="all-movies">
-            <h2 className="ml-8">All Movies</h2>
+            <h2 className={styles.allMoviesTitle}>All Movies</h2>
 
             {isLoading ? (
               <Loader />
@@ -131,12 +130,12 @@ function App() {
               marginPagesDisplayed={1}
               onPageChange={({ selected }) => setPage(selected + 1)}
               forcePage={page - 1}
-              containerClassName="flex gap-2 justify-center mt-6"
-              pageClassName="px-3 py-1 bg-gray-700 rounded"
-              pageLinkClassName="px-3 py-1 text-white cursor-pointer"
-              activeClassName="bg-gray-900"
-              previousClassName="px-3 py-1 bg-gray-700 rounded text-white hover:bg-gray-600 transition"
-              nextClassName="px-3 py-1 bg-gray-700 rounded text-white cursor-pointer"
+              containerClassName={styles.pagination}
+              pageClassName={styles.page}
+              pageLinkClassName={styles.pageLink}
+              activeClassName={styles.active}
+              previousClassName={styles.previous}
+              nextClassName={styles.next}
             />
           )}
 

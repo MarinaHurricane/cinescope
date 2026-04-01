@@ -1,0 +1,23 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.card {
+  height: 16rem;
+  background-color: #1f2937;
+  border-radius: 0.5rem;
+  opacity: 1;
+  transition: opacity 0.8s ease-in-out;
+}
+
+.card.loading {
+  opacity: 0.5;
+}

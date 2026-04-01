@@ -67,11 +67,9 @@ export default function MovieModal({ movie, onClose }: MovieModalProps) {
         <h2>{movie.title}</h2>
 
         {trailerKey && (
-          <div
-            className={`${css.videoContainer} flex justify-center aspect-video w-full`}
-          >
+          <div className={css.videoContainer}>
             <iframe
-              className="w-full h-full"
+              className={css.video}
               width="100%"
               height="400"
               src={`https://www.youtube.com/embed/${trailerKey}`}
